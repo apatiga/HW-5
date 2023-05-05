@@ -68,7 +68,7 @@ $(function () {
     const currentDate = dayjs().format('dddd, MMMM D, YYYY');
     const currentTime = dayjs().format('hh:mm:ss A');
     dateElement.text(currentDate);
-    timeElement.text(currentTime);
+    timeElement.text(currentTime
   }
 
   // TODO: Add code to display the current date in the header of the page.
