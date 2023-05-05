@@ -15,6 +15,21 @@ $(function () {
   //
 
   const currentHour = dayjs().format('H');
+  
+  function textEntry() {
+    $('.saveBtn').on('click', function() {
+      const key = $(this).parent().attr('id');
+      const value = $(this).siblings('.description').val();
+      localStorage.setItem(key, value);
+    });
+  }
+  // TODO: Add code to apply the past, present, or future class to each time
+  // block by comparing the id to the current hour. HINTS: How can the id
+  // attribute of each time-block be used to conditionally add or remove the
+  // past, present, and future classes? How can Day.js be used to get the
+  // current hour in 24-hour time?
+  //
+
 
   function hourlyColor() {
     $('.time-block').each(function() {
@@ -24,19 +39,6 @@ $(function () {
       $(this).toggleClass('future', blockHour > currentHour);
     });
   }
-  
-  function textEntry() {
-    $('.saveBtn').on('click', function() {
-      const key = $(this).parent().attr('id');
-     
-    });
-  }
-  // TODO: Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. HINTS: How can the id
-  // attribute of each time-block be used to conditionally add or remove the
-  // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time?
-  //
 
   function refreshColor() {
     $('.time-block').each(function() {
