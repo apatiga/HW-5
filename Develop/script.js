@@ -28,8 +28,7 @@ $(function () {
   function textEntry() {
     $('.saveBtn').on('click', function() {
       const key = $(this).parent().attr('id');
-      const value = $(this).siblings('.description').val();
-      localStorage.setItem(key, value);
+     
     });
   }
   // TODO: Add code to apply the past, present, or future class to each time
